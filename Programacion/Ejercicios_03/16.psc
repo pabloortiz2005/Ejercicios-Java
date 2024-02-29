@@ -1,0 +1,3 @@
+Algoritmo calificación
+	
+FinAlgoritmo

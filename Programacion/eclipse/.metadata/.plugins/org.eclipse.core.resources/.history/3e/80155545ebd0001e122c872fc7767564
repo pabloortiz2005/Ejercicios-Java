@@ -1,0 +1,127 @@
+package parking;
+
+import java.util.ArrayList;
+
+public class Parking {
+
+	private int plazas;
+
+	private ArrayList<String> matriculas;
+
+	private String nombre;
+
+
+	public Parking(String nombre, int plazas) {
+
+		this.setNombre(nombre);
+		this.setPlazas(plazas);
+		this.setMatriculas(new ArrayList<String>(plazas));;
+
+		for(int i=0;i<plazas;i++) {
+			this.matriculas.add(null);
+		}
+
+	}
+
+	public ArrayList<String> getMatriculas() {
+		return matriculas;
+	}
+
+	public void setMatriculas(ArrayList<String> matriculas) {
+		this.matriculas = matriculas;
+	}
+
+	public String getNombre() {
+		return nombre;
+	}
+
+	public void setNombre(String nombre) {
+		this.nombre = nombre;
+	}
+
+	public void setPlazas(int plazas) {
+		this.plazas = plazas;
+	}
+
+	public int getPlazas() {
+		return plazas;
+	}
+
+
+
+
+
+
+	//Metodo para dar la entrada a un coche
+
+	public void entrada(String matricula, int plaza) {
+
+
+		if(matriculas.contains(matricula)) {
+			System.out.println("Esa matricula ya esta aparcada");
+		} else {
+			//Comprobamos si la plaza esta ocupada
+			if(matriculas.get(plaza)==null) {
+				this.matriculas.add(plaza,matricula);
+			} else {
+				System.out.println("Esa plaza esta ocupada");
+			}
+
+		}
+		System.out.println("Plazas ocupadas: " + getPlazasOcupadas(plaza) + "\n Plazas libres: " + getPlazasLibres(plaza));
+	}
+
+
+
+	public int salida(String matricula) {
+		int plaza=0;
+
+		this.matriculas.add(plaza,null);
+		plaza=matriculas.indexOf(matricula);
+
+		return plaza;
+	}
+
+	public int getPlazasTotales() {
+		return this.plazas;
+	}
+
+	public int getPlazasOcupadas(int plaza) {
+
+		int ocupadas=0;
+
+		for (int i=0;i<matriculas.size();i++) {
+			if(matriculas.get(i)!=null) {
+				ocupadas++;
+			}
+		}
+
+
+		return ocupadas;
+	}
+
+	public int getPlazasLibres(int plaza) {
+
+		int libres;
+		libres=0;
+		for (int i=0;i<matriculas.size();i++) {
+			if(matriculas.get(i)==null) {
+				libres++;
+			} 
+		}
+
+
+		return libres;
+	}
+
+	@Override
+	public String toString() {
+		
+		return "Parking avenida\n------------------\n"+this.matriculas.toString();
+	}
+
+
+
+
+
+}

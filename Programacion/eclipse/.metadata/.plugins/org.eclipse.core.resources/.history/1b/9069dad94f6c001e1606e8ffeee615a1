@@ -1,0 +1,46 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class ej4 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		double s = 0.0;
+		int r;
+		int bc;
+		int bd;
+		int a;
+		int d;
+		
+		Scanner leer = new Scanner (System.in);
+		
+		System.out.println("Introduce r");
+		
+		r = leer.nextInt();
+		
+		System.out.println("Introduce a");
+		
+		a = leer.nextInt();
+		
+		System.out.println("Introduce bc");
+		
+		bc = leer.nextInt();
+		
+		System.out.println("Introduce bd");
+		
+		bd = leer.nextInt();
+		
+		System.out.println("Introduce d");
+		
+		d = leer.nextInt();
+		
+		s = 4/(3*(r + 34)) - 9*(a + bc) + ((3 + d *(2 + a)/(a + bd)));
+		
+		System.out.println("Solución: " + s);
+		
+		
+	}
+
+}

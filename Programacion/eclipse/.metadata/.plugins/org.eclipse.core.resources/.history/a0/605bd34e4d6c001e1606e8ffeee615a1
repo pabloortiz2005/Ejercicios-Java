@@ -1,0 +1,21 @@
+
+public class ej1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		int num = 0;
+		long num1 = 10000;
+		float num2 = 3.4;
+		double num3 = 34.45;
+		char num4 = 4;
+		boolean num5 = true;
+		
+		
+		
+		
+		
+	}
+
+}

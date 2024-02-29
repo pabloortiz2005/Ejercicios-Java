@@ -1,0 +1,15 @@
+package prueba02;
+
+public class clase2 {
+
+	int num;
+	String nombre;
+	boolean valido;
+	
+	num = 5;
+	nombre = "Javi";
+	valido = true;
+
+	
+	
+}

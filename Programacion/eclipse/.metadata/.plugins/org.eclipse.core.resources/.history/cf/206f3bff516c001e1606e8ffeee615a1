@@ -1,0 +1,31 @@
+package ejercicios;
+
+import java.util.Scanner;
+
+public class ej6 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int n;
+		boolean mayor;
+		Scanner leer = new Scanner (System.in);
+		
+		System.out.println("Introduce r");
+		
+		n = leer.nextInt();
+		
+		if (n>1 && n<=1000); {
+			
+			mayor=true;
+			
+			else {
+				
+				mayor = false;
+				
+			}
+		}
+		
+	}
+
+}

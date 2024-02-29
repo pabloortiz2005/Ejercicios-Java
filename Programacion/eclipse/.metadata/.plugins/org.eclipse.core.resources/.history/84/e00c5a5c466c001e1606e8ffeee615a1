@@ -1,0 +1,14 @@
+package prueba02;
+
+public class pruebaclase1 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		int numero = 10;
+		System.out.println("Numero :" + numero);
+		
+		
+	}
+
+}
